@@ -9,13 +9,13 @@ function AboutSection() {
       </div>
       <div className="flex  flex-col p-4">
         <h1 className="text-left text-2xl">Welcome To GMFX Global I Limited</h1>
-        <p className="flex leading-7 font-bold text-justify pt-10">
+        <p className="flex leading-7  text-justify text-2xl pt-10">
           We give you an opportunity to become the owner of own business and
           leader of your team. Every time you speak to someone about your
           business you are involved in marketing. Any conversation about your
           firm is an opportunity to promote your business and increase sales
         </p>
-        <p className="flex leading-7 font-bold text-justify pt-10">
+        <p className="flex leading-10 text-justify  text-xl pt-10">
           We are providing you opportunities for generating revenue from many
           sectors like Education, Computer Education, Marketing strategies and
           Fin-tech
@@ -51,7 +51,7 @@ function AboutSection() {
       <div className="flex flex-col">
         <li className="text-2xl font-bold text-left p-5 mt-4"> GMFX USP</li>
         <div className="flex flex-col p-7">
-          <p className=" leading-5">
+          <p className=" leading-10 text-2xl ">
             100% Legal & Genuine concept. Orginal Revenue Generation Plan.
             Automiatic payment transfer to the customer’s account at the time of
             payment. Member will also get GST receipt.
@@ -64,7 +64,7 @@ function AboutSection() {
           <li className="text-2xl font-bold text-left  mt-4">
             TERMS & CONDITIONS
           </li>
-          <div className="p-4">
+          <div className="p-4 leading-10 text-2xl text-justify">
             <li>
               5% Admin 5% TDS Charges will be deducted from every working income
             </li>

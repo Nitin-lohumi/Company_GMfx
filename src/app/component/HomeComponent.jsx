@@ -3,15 +3,18 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 
 function HomeComponent() {
   return (
-    <div className='h-screen flex justify-center items-center'>
-      <div className="flex flex-col md:grid md:grid-cols-2">
+    <div className='h-screen flex justify-center items-center mt-14'>
+      <div className="flex flex-col md:grid md:grid-cols-2 mt-32">
         <div className="flex flex-col p-4 w-auto">
           <div className='flex'>
             <h1 className='text-3xl font-bold p-2'>WELCOME TO GMFX GLOBAL LIMTED</h1>
           </div>
           <div className='flex'>
-            <p className='p-2 text-justify leading-10 text-gray-700 text-sm capitalize break-words'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta saepe voluptatum nemo sint vero voluptate unde minima, maxime iusto blanditiis! Neque similique fugiat aliquam possimus. Voluptate eligendi ratione numquam nobis.
+            <p className='p-3 text-2xl text-justify leading-10 text-gray-700  capitalize break-words'>
+            We give you an opportunity to become the owner of own business and
+          leader of your team. Every time you speak to someone about your
+          business you are involved in marketing. Any conversation about your
+          firm is an opportunity to promote your business and increase sales
             </p>
           </div>
           <div className='flex p-2'>

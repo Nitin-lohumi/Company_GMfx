@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full px-6 py-4 bg-blue-300 shadow-md z-50 fixed top-0 left-0">
+      <header className="w-full px-6 py-4 bg-blue-300 shadow-md z-50 fixed top-0 left-0 mb-24">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Image
@@ -26,7 +26,7 @@ const Header = () => {
               width={60}
               height={60}
             />
-            <h1 className="text-xl font-bold text-gray-600">RONI _ LOHUMI</h1>
+            <h1 className="md:text-xl  text-sm font-bold text-gray-600 ">RONI _ LOHUMI</h1>
           </div>
 
           {/* Desktop Navigation */}
