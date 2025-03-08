@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full px-6 py-4 bg-blue-300 shadow-md z-50 fixed top-0 left-0 mb-24">
+      <header className="w-full px-6 py-4 bg-blue-300 shadow-md z-50 fixed top-0 left-0 ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Image
