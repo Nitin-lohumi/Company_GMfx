@@ -3,7 +3,7 @@ import React from "react";
 
 function AboutSection() {
   return (
-    <div className="mt-24">
+    <div className="mt-40 pt-6">
       <div className="text-3xl font-bold text-center capitalize p-2">
         About Us
       </div>

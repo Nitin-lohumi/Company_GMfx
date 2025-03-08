@@ -3,7 +3,7 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 
 function HomeComponent() {
   return (
-    <div className='h-screen flex justify-center items-center mt-14'>
+    <div className='h-screen flex justify-center items-center mt-40'>
       <div className="flex flex-col md:grid md:grid-cols-2 mt-32">
         <div className="flex flex-col p-4 w-auto">
           <div className='flex'>
