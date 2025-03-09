@@ -11,12 +11,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Function to scroll to footer
   const scrollToFooter = () => {
     document.getElementById("footer")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Function to share website link
   const handleShare = async () => {
     const websiteURL = "https://company-g-mfx.vercel.app/";
     try {
@@ -34,17 +32,21 @@ const Header = () => {
     }
   };
 
+  // Closes menu after clicking a link or share button
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <>
-      <header className="w-full px-6 py-4 bg-blue-300 shadow-md z-50 fixed top-0 left-0 ">
+      <header className="w-full px-6 py-4 bg-blue-300 shadow-md z-50 fixed top-0 left-0">
         <div className="flex justify-between items-center">
+          {/* Logo & Name */}
           <div className="flex items-center gap-3">
-            <Image src="/GMFX_Logo.png" alt="Company Logo" width={60} height={60} />
+            <Image src="/GMFX_Logo.png" alt="Company Logo" width={50} height={50} />
             <h1 className="md:text-xl text-sm font-bold text-gray-600">RONI _ LOHUMI</h1>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 relative">
+          <nav className="hidden md:flex space-x-6">
             {["/", "/about"].map((path) => (
               <Link key={path} href={path} className="relative group">
                 <span
@@ -71,26 +73,10 @@ const Header = () => {
 
           {/* Buttons */}
           <div className="flex items-center space-x-3">
-            {/* Share Button */}
-            <button
-              onClick={handleShare}
-              className="hidden md:flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 transition"
-            >
-              <FaShareAlt className="mr-2" /> Share
-            </button>
-
-            {/* Desktop Contact Button */}
+            {/* Contact Button (Always in Header) */}
             <button
               onClick={scrollToFooter}
-              className="hidden md:block cursor-pointer px-4 py-2 bg-transparent border text-gray-700 rounded-md hover:bg-blue-700 hover:text-white"
-            >
-              Contact Us
-            </button>
-
-            {/* Mobile Contact Button */}
-            <button
-              onClick={scrollToFooter}
-              className="md:hidden px-3 py-2 bg-blue-600 text-white text-sm rounded-md"
+              className="px-2 py-2 bg-blue-500 cursor-pointer text-white border rounded-md hover:bg-blue-700 hover:text-white"
             >
               Contact
             </button>
@@ -105,6 +91,50 @@ const Header = () => {
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div
+          className="fixed top-0 left-0 inset-0 bg-black/25 z-40"
+          onClick={closeMenu} // Clicking outside closes menu
+        />
+      )}
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-2/3 bg-gray-300 shadow-lg z-50 transition-transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-between items-center p-5 border-b">
+          <h2 className="text-lg font-semibold">Menu</h2>
+          <button onClick={closeMenu} className="text-2xl text-gray-700">
+            <FiX />
+          </button>
+        </div>
+        <nav className="flex flex-col space-y-4 p-5">
+          {["/", "/about"].map((path) => (
+            <Link key={path} href={path} onClick={closeMenu} className="relative">
+              <span className="text-gray-700">
+                {path === "/"
+                  ? "Home"
+                  : path.substring(1).charAt(0).toUpperCase() + path.substring(2)}
+              </span>
+            </Link>
+          ))}
+
+          {/* Mobile Share Button inside menu */}
+          <button
+            onClick={() => {
+              handleShare();
+              closeMenu();
+            }}
+            className="w-full flex items-center justify-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 transition"
+          >
+            <FaShareAlt className="mr-2" /> Share
+          </button>
+        </nav>
+      </div>
     </>
   );
 };
