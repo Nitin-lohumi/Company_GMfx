@@ -1,12 +1,13 @@
 import "./globals.css";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
-import Head from "next/head"; 
+import Head from "next/head";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
+        <meta name="google-adsense-account" content="ca-pub-4592442373021387" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592442373021387"
