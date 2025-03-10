@@ -1,19 +1,13 @@
 import "./globals.css";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
-import Head from "next/head";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="google-adsense-account" content="ca-pub-4592442373021387" />
-        {/* <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4592442373021387"
-          crossorigin="anonymous"
-        ></script> */}
-      </Head>
+      </head>
       <body>
         <div className="background-overlay"></div>
         <Header />
