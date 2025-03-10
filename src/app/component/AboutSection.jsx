@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import AdBanner from './AddBanner';
 function AboutSection() {
   return (
     <div className="mt-40 pt-6">
