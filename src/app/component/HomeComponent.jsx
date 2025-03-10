@@ -28,7 +28,7 @@ function HomeComponent() {
         </div>
         <div className='flex items-center h-64 mt-16 md:mt-0 w-auto relative overflow-hidden'>
           <div className='flex justify-center h-full w-full absolute top-0 left-0'>
-            <img src={"/Rectangle 9541.png"} alt="" className='w-60 h-60' />
+            <img src={"/Rectangle 9541.png"} alt="" className='w-64 h-64' />
           </div>
           <div className='flex justify-center  w-full absolute top-0 left-2'>
             <img src="/gmfx_1img.png" alt="img" className='w-50 h-50' />
