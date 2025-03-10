@@ -1,13 +1,13 @@
 import React from 'react'
 import HomeComponent from './component/HomeComponent'
 import AboutSection from './component/AboutSection'
-import Footer from './component/Footer'
-
+import Awards from './component/Awards'
 function page() {
   return (
    <div>
      <HomeComponent/>
      <AboutSection/>
+     <Awards/>
     </div>
   )
 }

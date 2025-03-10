@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaShareAlt } from "react-icons/fa"; // Share Icon
+import { FaShareAlt, FaAward } from "react-icons/fa"; // Share & Award Icons
 import { motion } from "framer-motion";
 
 const Header = () => {
@@ -32,7 +32,6 @@ const Header = () => {
     }
   };
 
-  // Closes menu after clicking a link or share button
   const closeMenu = () => setIsOpen(false);
 
   return (
@@ -46,8 +45,8 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
-            {["/", "/about"].map((path) => (
+          <nav className="hidden md:flex space-x-6 items-center">
+            {["/", "/about", "/awards"].map((path) => (
               <Link key={path} href={path} className="relative group">
                 <span
                   className={`relative text-gray-700 ${
@@ -71,24 +70,25 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Buttons */}
           <div className="flex items-center space-x-3">
-            {/* Contact Button (Always in Header) */}
             <button
               onClick={scrollToFooter}
               className="px-2 py-2 bg-blue-600 cursor-pointer border-none text-white border rounded-md hover:bg-blue-700 hover:text-white"
             >
               Contact
             </button>
-
-            {/* Desktop Share Button */}
             <button
               onClick={handleShare}
               className="hidden md:flex items-center px-4 cursor-pointer py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
             >
               <FaShareAlt className="mr-2" /> Share
             </button>
-
+            
+            {/* Awards Icon */}
+            <Link href="/awards" className="hidden md:flex items-center px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition">
+              <FaAward className="mr-2" /> Awards
+            </Link>
+            
             {/* Mobile Menu Button */}
             <button
               className="md:hidden ml-4 text-2xl text-gray-700"
@@ -104,7 +104,7 @@ const Header = () => {
       {isOpen && (
         <div
           className="fixed top-0 left-0 inset-0 bg-black/25 z-40"
-          onClick={closeMenu} // Clicking outside closes menu
+          onClick={closeMenu}
         />
       )}
 
@@ -121,7 +121,7 @@ const Header = () => {
           </button>
         </div>
         <nav className="flex flex-col space-y-4 p-5">
-          {["/", "/about"].map((path) => (
+          {["/", "/about", "/awards"].map((path) => (
             <Link key={path} href={path} onClick={closeMenu} className="relative">
               <span className="text-gray-700">
                 {path === "/"
@@ -130,8 +130,8 @@ const Header = () => {
               </span>
             </Link>
           ))}
-
-          {/* Mobile Share Button inside menu */}
+          
+          {/* Mobile Share Button */}
           <button
             onClick={() => {
               handleShare();
