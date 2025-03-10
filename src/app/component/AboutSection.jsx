@@ -24,6 +24,7 @@ function AboutSection() {
           <img src="/gmfx_IMG1.jpg" alt="" className="w-64 h-64 " />
           <img src="/image1.1.jpg" alt="" className="w-64 h-64 " />
         </div>
+        <AdBanner/> 
         <div className="flex flex-col text-3xl mt-12 font-bold">
           <ul className="list-none">
             <li>EVERYONE HAS DESIRES</li>

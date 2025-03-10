@@ -76,9 +76,17 @@ const Header = () => {
             {/* Contact Button (Always in Header) */}
             <button
               onClick={scrollToFooter}
-              className="px-2 py-2 bg-blue-500 cursor-pointer text-white border rounded-md hover:bg-blue-700 hover:text-white"
+              className="px-2 py-2 bg-blue-600 cursor-pointer border-none text-white border rounded-md hover:bg-blue-700 hover:text-white"
             >
               Contact
+            </button>
+
+            {/* Desktop Share Button */}
+            <button
+              onClick={handleShare}
+              className="hidden md:flex items-center px-4 cursor-pointer py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            >
+              <FaShareAlt className="mr-2" /> Share
             </button>
 
             {/* Mobile Menu Button */}

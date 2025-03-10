@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowTrendUp } from "react-icons/fa6";
-
+import AdBanner from './AddBanner';
 function HomeComponent() {
   return (
     <div className='h-screen flex justify-center items-center mt-40'>
@@ -24,6 +24,8 @@ function HomeComponent() {
             </button>
             </a>
           </div>
+          <AdBanner/> 
+          {/* added component */}
         </div>
         <div className='flex items-center h-64 mt-16 md:mt-0 w-auto relative overflow-hidden'>
           <div className='flex justify-center h-full w-full absolute top-0 left-0'>
@@ -34,6 +36,7 @@ function HomeComponent() {
           </div>
         </div>
       </div>
+      <AdBanner/> 
     </div>
   );
 }
